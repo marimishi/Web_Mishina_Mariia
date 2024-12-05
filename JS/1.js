@@ -5,11 +5,11 @@ function pickPropArray(array, prop) {
 }
 
 const students = [
-    { name: 'Павел', age: 20 },
-    { name: 'Иван', age: 20 },
-    { name: 'Эдем', age: 20 },
-    { name: 'Денис', age: 20 },
-    { name: 'Виктория', age: 20 },
+    { name: 'РџР°РІРµР»', age: 20 },
+    { name: 'РРІР°РЅ', age: 20 },
+    { name: 'Р­РґРµРј', age: 20 },
+    { name: 'Р”РµРЅРёСЃ', age: 20 },
+    { name: 'Р’РёРєС‚РѕСЂРёСЏ', age: 20 },
     { age: 40 },
 ];
 
