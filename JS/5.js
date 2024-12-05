@@ -18,8 +18,8 @@ function longestCommonSuffix(strs) {
     return suffix.length >= 2 ? suffix : "";
 }
 
-const strs1 = ["цветок", "поток", "хлопок"];
-console.log(longestCommonSuffix(strs1)); // "ок"
+const strs1 = ["С†РІРµС‚РѕРє", "РїРѕС‚РѕРє", "С…Р»РѕРїРѕРє"];
+console.log(longestCommonSuffix(strs1)); // "РѕРє"
 
-const strs2 = ["собака", "гоночная машина", "машина"];
+const strs2 = ["СЃРѕР±Р°РєР°", "РіРѕРЅРѕС‡РЅР°СЏ РјР°С€РёРЅР°", "РјР°С€РёРЅР°"];
 console.log(longestCommonSuffix(strs2)); // ""
