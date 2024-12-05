@@ -5,8 +5,8 @@ function spinWords(sentence) {
         .join(' ');
 }
 
-const result1 = spinWords("Привет от Legacy");
-console.log(result1); // тевирП от ycageL
+const result1 = spinWords("РџСЂРёРІРµС‚ РѕС‚ Legacy");
+console.log(result1); // С‚РµРІРёСЂРџ РѕС‚ ycageL
 
 const result2 = spinWords("This is a test");
 console.log(result2); // This is a test
