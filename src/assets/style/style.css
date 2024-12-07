@@ -1,10 +1,19 @@
 @import "reset.css";
-@import "components/index.css";
+@import "components/main.css";
+
+
+/* Äëÿ SVG */
+.icon-path {
+    fill: currentColor;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
 
 html {
     font-family: 'SF Pro Text', sans-serif;
     font-style: normal;
     font-weight: 400;
+    height: 100%;
 }
 
 body {
@@ -12,20 +21,13 @@ body {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    height: 100%; 
 }
 
-.header-container {
+.container {
+    padding: 0 100px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     height: 100%;
-    padding: 0 108px;
+    box-sizing: border-box; 
 }
-
-/*Äëÿ SVG*/
-.icon-path {
-    fill: currentColor;
-    fill-rule: evenodd;
-    clip-rule: evenodd;
-}
-

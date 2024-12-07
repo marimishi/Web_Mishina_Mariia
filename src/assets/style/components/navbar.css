@@ -1,10 +1,20 @@
-.header__content {
+.navbar {
+    border-radius: 12px;
+    padding: 16px 24px;
+    width: fit-content;
+    position: sticky;
+    top: 24px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+.navbar__inner {
     display: flex;
     gap: 80px;
     align-items: center;
 }
 
-.header__title {
+.navbar__logo {
     font-family: "Inter Bold", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -12,41 +22,40 @@
     line-height: 18px;
     letter-spacing: -0.15px;
     text-decoration: none;
-    color: #2d66ee;
+    color: #2d66ee; 
 }
 
-.header__links {
+.navbar__menu {
     display: flex;
     gap: 24px;
 }
 
-.header__link,
-.header__contact-content a {
+.navbar__item, .navbar__info a {
     font-family: "SF Pro Text Medium", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.15px;
     text-decoration: none;
-    color: #101828;
+    color: #2d66ee; 
 }
 
-.header__contacts {
+.navbar__info {
     display: flex;
     gap: 32px;
 }
 
-.header__contact {
+.navbar__info-block {
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-.header__contact-content {
+.navbar__details {
     display: flex;
     gap: 16px;
 }
 
-    .header__contact-content a {
-        color: #2d66ee;
-    }
+.navbar__link {
+    color: #2d66ee;
+}
