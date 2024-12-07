@@ -1,18 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<body>
-<div class="test" style="color: blue">
-    test
-</div>
 
-<script src="index.js"></script>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <img class="header__logo" src="logo.png" alt="Логотип">
+        <nav class="header__nav">
+            <ul class="header__links">
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Медиа</a></li>
+                <li><a href="#">Кейсы</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Приветственный блок -->
+    <section class="welcome">
+        <div class="welcome__content">
+            <h1 class="welcome__title">Разработка мобильных приложений</h1>
+            <h4 class="welcome__boldtext">и веб-сервисов любой сложности</h4>
+        </div>
+        <div class="welcome__form">
+            <h2 class="welcome__subtitle">Оставьте свои контакты</h2>
+            <form class="welcome__form-content">
+                <div class="form-item">
+                    <label class="form-label" for="phone">Телефон</label>
+                    <input class="form-input" type="text" id="phone" placeholder="+7 (702) 517-11-98">
+                </div>
+                <div class="form-item">
+                    <label class="form-label" for="name">Имя</label>
+                    <input class="form-input" type="text" id="name" placeholder="Агадиль">
+                </div>
+                <button class="form-button" type="submit">Получить консультацию</button>
+            </form>
+        </div>
+        <img class="welcome__image" src="welcome-image.jpg" alt="Изображение">
+    </section>
+
+    <hr>
+
+    <!-- Блок с информацией о разработке -->
+    <section class="devcycle">
+        <div class="devcycle__content">
+            <h1 class="devcycle__title"></h1>
+            <h4 class="devcycle__boldtext"></h4>
+            <h2 class="devcycle__subtitle"></h2>
+            <p class="devcycle__text"></p>
+            <h2 class="devcycle__subtitle"></h2>
+            <p class="devcycle__text"></p>
+        </div>
+        <div class="devcycle__list">
+            <div class="devcycle__links">
+                <a href="#" class="devcycle__link"></a>
+                <a href="#" class="devcycle__link"></a>
+                <a href="#" class="devcycle__link"></a>
+                <a href="#" class="devcycle__link"></a>
+                <a href="#" class="devcycle__link"></a>
+                <a href="#" class="devcycle__link"></a>
+                <a href="#" class="devcycle__link"></a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Блок с разработанными элементами -->
+    <section class="developed">
+        <h1 class="developed__title"></h1>
+        <div class="developed__grid">
+            <div class="developed__item">
+                <svg class="item-icon"></svg>
+                <h3 class="item-title"></h3>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Блок с проектами -->
+    <section class="projects">
+        <h1 class="projects__title"></h1>
+        <h4 class="projects__boldtext"></h4>
+        <div class="projects__links">
+            <a class="projects__link"></a>
+            <a class="projects__link"></a>
+            <a class="projects__link"></a>
+            <a class="projects__link"></a>
+            <a class="projects__link"></a>
+            <a class="projects__link"></a>
+            <a class="projects__link"></a>
+            <button class="projects__button"></button>
+        </div>
+        <div class="projects__content">
+            <h1 class="projects__title"></h1>
+            <h4 class="projects__boldtext"></h4>
+            <p class="projects__text"></p>
+            <div class="projects__download">
+                <img class="download-image" src="" alt="">
+                <img class="download-image" src="" alt="">
+            </div>
+        </div>
+        <img class="projects__image" src="" alt="">
+    </section>
+
+    <hr>
+
+    <!-- Блок обсуждения -->
+    <section class="discuss">
+        <div class="discuss__content">
+            <h1 class="discuss__title"></h1>
+            <h4 class="discuss__boldtext"></h4>
+        </div>
+        <form class="discuss__form">
+            <div class="form-item">
+                <label class="form-label" for="#phone"></label>
+                <input class="form-input" type="text" id="phone">
+            </div>
+            <div class="form-item">
+                <label class="form-label" for="#name"></label>
+                <input class="form-input" type="text" id="name">
+            </div>
+            <button class="form-button" type="submit"></button>
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Блок стадий разработки -->
+    <section class="stages">
+        <h1 class="stages__title"></h1>
+        <div class="stages__items">
+            <div class="stages__item">
+                <svg class="item-icon"></svg>
+                <h3 class="item-title"></h3>
+                <p class="item-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Блок с командой -->
+    <section class="team">
+        <div class="team__content">
+            <h1 class="team__title"></h1>
+            <h4 class="team__boldtext"></h4>
+        </div>
+        <img class="team__image" src="" alt="">
+    </section>
+
+    <hr>
+
+    <!-- Блок с электронной книгой -->
+    <section class="ebook">
+        <h1 class="ebook__title"></h1>
+        <form class="ebook__form">
+            <div class="form-item">
+                <label class="form-label" for="#phone"></label>
+                <input class="form-input" type="text" id="phone">
+            </div>
+            <div class="form-item">
+                <label class="form-label" for="#name"></label>
+                <input class="form-input" type="text" id="name">
+            </div>
+            <div class="form-item">
+                <label class="form-label" for="#email"></label>
+                <input class="form-input" type="text" id="email">
+            </div>
+            <button class="form-button" type="submit"></button>
+        </form>
+        <img class="ebook__image" src="" alt="">
+    </section>
+
+    <hr>
+
+    <!-- Блок с вопросами и ответами -->
+    <section class="faq">
+        <h1 class="faq__title"></h1>
+        <div class="faq__items">
+            <div class="faq__item">
+                <h3 class="item-title"></h3>
+                <button class="item-button"></button>
+            </div>
+            <!-- Повторить блоки faq__item по мере необходимости -->
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <img class="footer__logo" src="logo-footer.png" alt="Логотип">
+        <div class="footer__links">
+            <div class="footer__link">
+                <label class="link-label" for="phone-footer">Телефон</label>
+                <a class="link" href="tel:+77025171198" id="phone-footer">+7 (702) 517-11-98</a>
+            </div>
+            <div class="footer__link">
+                <label class="link-label" for="email-footer">Email</label>
+                <a class="link" href="mailto:thousanditcompany@gmail.com" id="email-footer">thousanditcompany@gmail.com</a>
+            </div>
+            <div class="footer__link">
+                <label class="link-label" for="address-footer">Адрес</label>
+                <a class="link" href="#" id="address-footer">Казахстан</a>
+            </div>
+            <div class="footer__link">
+                <label class="link-label" for="doc-footer">Документы</label>
+                <a class="link" href="#" id="doc-footer">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <p class="footer__text">Все права защищены © 2024</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
