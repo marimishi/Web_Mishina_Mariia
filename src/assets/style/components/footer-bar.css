@@ -73,10 +73,40 @@
 
 .section__footer-contacts {
     display: flex;
+    gap: 40px; 
+    flex-wrap: wrap; 
 }
 
 .section__footer-contact {
-    display: grid;
+    display: flex;
+    flex-direction: column; 
     gap: 8px;
-    flex: 1;
+    flex: 1 0 45%; 
+}
+
+/* Адаптивные стили для экранов с шириной 768px и меньше */
+@media screen and (max-width: 768px) {
+    .section__footer-contacts {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px; 
+    }
+
+    .section__footer-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Стили для экранов шириной больше 768px */
+@media screen and (min-width: 769px) {
+    .section__footer-contacts {
+        display: flex; 
+        flex-wrap: wrap; 
+    }
+
+    .section__footer-contact {
+        flex: 1 0 22%; 
+    }
 }
