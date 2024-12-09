@@ -434,6 +434,7 @@ table {
   .section__footer-contacts {
     display: flex;
     flex-wrap: revert;
+    gap: 20px;
   }
   .section__footer-contact {
     flex: 1 0 22%;
