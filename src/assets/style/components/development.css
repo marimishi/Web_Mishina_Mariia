@@ -78,12 +78,6 @@
 			border-bottom: 1px solid #2d66ee;
 		}
 
-@media screen and (max-width: 1224px) {
-	.section__developcycle {
-		margin: 0 -80px;
-		padding: 80px;
-	}
-}
 
 @media screen and (max-width: 1023px) {
 	.section__developcycle {
