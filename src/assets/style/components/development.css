@@ -1,149 +1,130 @@
-.block__devcycle {
-	background-color: #ffffff;
-	margin-left: -108px;
-	margin-right: -108px;
+.section__developcycle {
+	background: #fff;
+	margin: 0 -108px;
 	padding: 80px 108px;
 	width: 100%;
 	display: flex;
-	gap: 128px;
+	column-gap: 128px;
 }
 
-.block__devcycle-leftblock {
+.section__developcycle-leftblock {
 	width: 600px;
 	display: grid;
-	gap: 34px;
+	row-gap: 34px;
 }
 
-.block__devcycle-content {
+.section__developcycle-content {
 	display: grid;
-	gap: 32px;
+	row-gap: 32px;
 }
 
-.block__devcycle-title {
-	font-family: "Inter Bold", sans-serif;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 144%;
+.section__developcycle-title {
+	font: 700 36px/144% "Inter Bold", sans-serif;
 	letter-spacing: 0.33px;
 	color: #101828;
 }
 
-.block__devcycle-text {
-	font-family: "SF Pro Text Medium", sans-serif;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 20px;
+.section__developcycle-text {
+	font: 500 15px/20px "SF Pro Text Medium", sans-serif;
 	letter-spacing: -0.24px;
 	color: #101828;
 }
 
-.block__devcycle-tech {
+.section__developcycle-tech {
 	width: 496px;
 	display: grid;
-	gap: 16px;
+	row-gap: 16px;
 }
 
-.block__devcycle-subtitle {
-	font-family: "SF Pro Display Semibold", sans-serif;
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 24px;
+.section__developcycle-subtitle {
+	font: 600 20px/24px "SF Pro Display Semibold", sans-serif;
 	letter-spacing: 0.34px;
 	color: #101828;
 }
 
-.block__devcycle-enum {
-	font-family: "SF Pro Text Regular", sans-serif;
-	font-weight: 400;
-	font-size: 17px;
-	line-height: 22px;
+.section__developcycle-enum {
+	font: 400 17px/22px "SF Pro Text Regular", sans-serif;
 	letter-spacing: -0.41px;
 	color: #344054;
 }
 
-	.block__devcycle-enum span {
+	.section__developcycle-enum span {
 		color: #2d66ee;
 	}
 
-.block__devcycle-list {
+.section__developcycle-list {
 	display: grid;
 }
 
-.block__devcycle-item {
+.section__developcycle-item {
 	padding: 12px 0;
 	display: flex;
-	gap: 12px;
 	align-items: center;
-	width: fit-content;
+	column-gap: 12px;
+	width: max-content;
 }
 
-	.block__devcycle-item a {
-		font-family: "SF Pro Display Regular", sans-serif;
-		font-weight: 400;
-		font-size: 20px;
-		line-height: 24px;
+	.section__developcycle-item a {
+		font: 400 20px/24px "SF Pro Display Regular", sans-serif;
 		letter-spacing: 0.38px;
 		color: #1d2939;
 		text-decoration: none;
 		cursor: pointer;
 	}
 
-		.block__devcycle-item a:hover {
-			font-family: "SF Pro Display Semibold", sans-serif;
-			font-weight: 600;
+		.section__developcycle-item a:hover {
+			font: 600 20px/24px "SF Pro Display Semibold", sans-serif;
 			color: #101828;
-			border-bottom: solid 1px #2d66ee;
+			border-bottom: 1px solid #2d66ee;
 		}
 
 @media screen and (max-width: 1224px) {
-	.block__devcycle {
-		margin-left: -80px;
-		margin-right: -80px;
+	.section__developcycle {
+		margin: 0 -80px;
 		padding: 80px;
 	}
 }
 
 @media screen and (max-width: 1023px) {
-	.block__devcycle {
-		margin-left: -32px;
-		margin-right: -32px;
+	.section__developcycle {
+		margin: 0 -32px;
 		padding: 32px;
 		gap: 82px;
 	}
 
-	.block__devcycle-leftblock {
+	.section__developcycle-leftblock {
 		margin-left: 40px;
 		width: 320px;
-		gap: 32px;
+		row-gap: 32px;
 	}
 
-	.block__devcycle-content, .block__devcycle-tech {
+	.section__developcycle-content,
+	.section__developcycle-tech {
 		width: 320px;
 	}
 
-	.block__devcycle-title {
+	.section__developcycle-title {
 		font-size: 28px;
 	}
 
-	.block__devcycle-enum {
+	.section__developcycle-enum {
 		font-size: 14px;
 	}
 }
 
 @media screen and (max-width: 767px) {
-	.block__devcycle {
-		margin-left: -16px;
-		margin-right: -16px;
+	.section__developcycle {
+		margin: 0 -16px;
 		padding: 32px 16px;
 		flex-direction: column;
-		gap: 32px;
+		row-gap: 32px;
 	}
 
-	.block__devcycle-leftblock {
-		margin-left: initial;
+	.section__developcycle-leftblock {
+		margin: 0;
 	}
 
-	.block__devcycle-enum {
+	.section__developcycle-enum {
 		font-size: 14px;
 		width: 278px;
 	}
