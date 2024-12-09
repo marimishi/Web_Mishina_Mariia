@@ -1,8 +1,6 @@
 @import "reset.css";
-@import "components/main.css";
+@import "components/main.scss";
 
-
-/* Äëÿ SVG */
 .icon-path {
     fill: currentColor;
     fill-rule: evenodd;

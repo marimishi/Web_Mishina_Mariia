@@ -1,0 +1,365 @@
+.navbar {
+  border-radius: 12px;
+  padding: 16px 24px;
+  width: fit-content;
+  position: fixed;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  z-index: 1000;
+  box-sizing: border-box;
+  margin: 50px;
+  max-width: 100%;
+}
+
+.navbar__inner {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.navbar__menu-toggle {
+  display: none;
+}
+
+.navbar__menu {
+  width: 59px;
+  height: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__menu svg {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar__logo, .navbar__menu-title {
+  font-family: "Inter Bold", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  color: #2d66ee;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar__link, .navbar__contact-content a {
+  font-family: "SF Pro Text Medium", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  color: #101828;
+}
+
+.navbar__contacts {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar__contact-phone, .navbar__contact-mail, .navbar__menu-contact {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar__contact-phone svg, .navbar__contact-mail svg {
+  width: 24px;
+  height: 24px;
+  color: #2d66ee;
+}
+
+.navbar__contact-content {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar__contact-content a {
+  color: #2D66EE;
+}
+
+.navbar__menu-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  z-index: 9999;
+  overflow: auto;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar__menu-toggle:checked ~ .navbar__menu-content {
+  display: block;
+}
+
+.navbar__menu-close-wrapper {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.navbar__menu-close {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar__menu-close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar__menu-wrapper {
+  display: grid;
+  gap: 65px;
+  padding: 100px 40px;
+}
+
+.navbar__menu-title {
+  font-size: 48px;
+  text-align: center;
+  line-height: 48px;
+}
+
+.navbar__menu-blocks {
+  display: grid;
+  gap: 65px;
+  justify-content: center;
+}
+
+.navbar__item {
+  display: grid;
+  gap: 32px;
+  text-align: center;
+}
+
+.navbar__contact-phone svg,
+.navbar__contact-mail svg,
+.navbar__menu-contact svg {
+  width: 24px;
+  height: 24px;
+  fill: #2D66EE;
+}
+
+.navbar__menu-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "SF Pro Text Medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #2D66EE;
+}
+
+.navbar__menu-contact svg {
+  width: 24px;
+  height: 24px;
+  fill: #2D66EE;
+}
+
+.navbar__menu-contact-content a {
+  color: #2D66EE;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar__item_burger {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 144%;
+  letter-spacing: 0.01em;
+  color: #101828;
+}
+
+.navbar__menu-contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 16px 17px;
+    max-width: 100%;
+  }
+  .navbar__inner {
+    gap: initial;
+    justify-content: space-between;
+  }
+  .navbar__menu {
+    display: block;
+  }
+  .navbar__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .navbar__links, .navbar__contacts {
+    display: none;
+  }
+  .navbar__menu-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    z-index: 9999;
+    overflow: auto;
+    display: none;
+  }
+  .navbar__menu-wrapper {
+    display: grid;
+    gap: 65px;
+    padding: 70px 40px;
+  }
+  .navbar__menu-title {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    text-align: center;
+  }
+  .navbar__menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+  .navbar__menu-link {
+    font-family: "Inter Regular", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 144%;
+    letter-spacing: 0.33px;
+    text-decoration: none;
+    color: #101828;
+  }
+  .navbar__menu-contacts {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+  }
+  .navbar__menu-contact {
+    gap: 8px;
+  }
+  .navbar__menu-contact svg {
+    width: 28px;
+    height: 28px;
+    color: #2d66ee;
+  }
+  .navbar__menu-contact-content a {
+    font-family: "SF Pro Text Medium", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.15px;
+    color: #2d66ee;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .navbar__menu-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .navbar {
+    padding: 25px 32px;
+    width: 100%;
+    top: 0px;
+    margin: 0px;
+  }
+  .navbar__inner {
+    gap: initial;
+    justify-content: space-between;
+  }
+  .navbar__menu {
+    display: block;
+  }
+  .navbar__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .navbar__links, .navbar__contact-phone {
+    display: none;
+  }
+  .navbar__menu-content {
+    display: none;
+  }
+  .navbar__menu-wrapper {
+    display: grid;
+    gap: 65px;
+    padding: 100px 40px;
+  }
+  .navbar__menu-title {
+    font-size: 48px;
+    text-align: center;
+    line-height: 48px;
+  }
+  .navbar__menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+  .navbar__menu-link {
+    font-family: "Inter Regular", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 144%;
+    letter-spacing: 0.33px;
+    text-decoration: none;
+    color: #101828;
+  }
+  .navbar__menu-contacts {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    row-gap: 22px;
+    justify-content: center;
+  }
+  .navbar__menu-contact {
+    gap: 4px;
+  }
+  .navbar__menu-contact svg {
+    width: 28px;
+    height: 28px;
+    color: #2d66ee;
+  }
+  .navbar__menu-contact-content a {
+    font-family: "SF Pro Text Medium", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.15px;
+    color: #2d66ee;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+/*# sourceMappingURL=navbar.scss.map */

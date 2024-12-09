@@ -1,0 +1,117 @@
+.section__developcycle {
+  background: #fff;
+  margin: 0 -108px;
+  padding: 80px 108px;
+  width: 100%;
+  display: flex;
+  column-gap: 128px;
+}
+
+.section__developcycle-leftblock {
+  width: 600px;
+  display: grid;
+  row-gap: 34px;
+}
+
+.section__developcycle-content {
+  display: grid;
+  row-gap: 32px;
+}
+
+.section__developcycle-title {
+  font: 700 36px/144% "Inter Bold", sans-serif;
+  letter-spacing: 0.33px;
+  color: #101828;
+}
+
+.section__developcycle-text {
+  font: 500 15px/20px "SF Pro Text Medium", sans-serif;
+  letter-spacing: -0.24px;
+  color: #101828;
+}
+
+.section__developcycle-tech {
+  width: 496px;
+  display: grid;
+  row-gap: 16px;
+}
+
+.section__developcycle-subtitle {
+  font: 600 20px/24px "SF Pro Display Semibold", sans-serif;
+  letter-spacing: 0.34px;
+  color: #101828;
+}
+
+.section__developcycle-enum {
+  font: 400 17px/22px "SF Pro Text Regular", sans-serif;
+  letter-spacing: -0.41px;
+  color: #344054;
+}
+
+.section__developcycle-enum span {
+  color: #2d66ee;
+}
+
+.section__developcycle-list {
+  display: grid;
+}
+
+.section__developcycle-item {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  width: max-content;
+}
+
+.section__developcycle-item a {
+  font: 400 20px/24px "SF Pro Display Regular", sans-serif;
+  letter-spacing: 0.38px;
+  color: #1d2939;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section__developcycle-item a:hover {
+  font: 600 20px/24px "SF Pro Display Semibold", sans-serif;
+  color: #101828;
+  border-bottom: 1px solid #2d66ee;
+}
+
+@media screen and (max-width: 1023px) {
+  .section__developcycle {
+    margin: 0 -32px;
+    padding: 32px;
+    gap: 82px;
+  }
+  .section__developcycle-leftblock {
+    margin-left: 40px;
+    width: 320px;
+    row-gap: 32px;
+  }
+  .section__developcycle-content,
+  .section__developcycle-tech {
+    width: 320px;
+  }
+  .section__developcycle-title {
+    font-size: 28px;
+  }
+  .section__developcycle-enum {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section__developcycle {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .section__developcycle-leftblock {
+    margin: 0;
+  }
+  .section__developcycle-enum {
+    font-size: 14px;
+    width: 278px;
+  }
+}
+
+/*# sourceMappingURL=development.scss.map */
