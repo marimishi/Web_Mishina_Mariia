@@ -123,12 +123,12 @@
 
 @media screen and (max-width: 1023px) {
     .section__intro {
-        margin-top: -90px;
+        margin-top: 20px;
         height: 762px;
     }
 
     .section__intro-content {
-        margin-top: 138px;
+        margin-top: 100px;
         width: 382px;
         height: 204px;
     }
@@ -169,15 +169,14 @@
 
         .section__intro-image img {
             scale: 0.6;
-            transform: translate(50%, -46%);
+            transform: translate(34%, -50%);
         }
 }
 
 @media screen and (max-width: 767px) {
 
     .section__intro-content {
-        margin-top: 250px;
-        width: 600px;
+        margin-top: 200px;
         height: 220px;
         display: grid;
         gap: 24px;
