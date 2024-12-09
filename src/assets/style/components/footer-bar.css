@@ -102,8 +102,9 @@
 /* Стили для экранов шириной больше 768px */
 @media screen and (min-width: 426px) {
     .section__footer-contacts {
-        display: flex; 
-        flex-wrap: revert; 
+        display: flex;
+        flex-wrap: revert;
+        gap: 20px;
     }
 
     .section__footer-contact {
