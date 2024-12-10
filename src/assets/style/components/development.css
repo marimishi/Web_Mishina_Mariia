@@ -110,6 +110,7 @@
 	.section__developcycle {
 		flex-direction: column;
 		row-gap: 32px;
+		margin-top: 300px;
 	}
 
 	.section__developcycle-leftblock {
