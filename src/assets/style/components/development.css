@@ -1,10 +1,10 @@
 .section__developcycle {
 	background: #fff;
-	margin: 0 -108px;
-	padding: 80px 8px 80px 150px;
+	margin-left: -50px;
+	padding: 50px;
 	width: 100%;
 	display: flex;
-	column-gap: 128px;
+	column-gap: 95px;
 }
 
 .section__developcycle-leftblock {
@@ -82,7 +82,7 @@
 @media screen and (max-width: 1023px) {
 	.section__developcycle {
 		margin: 0 -32px;
-		padding: 32px;
+		padding: 46px;
 		gap: 82px;
 	}
 

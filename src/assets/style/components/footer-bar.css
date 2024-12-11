@@ -1,10 +1,11 @@
 .section__footer {
+    /* margin-left: 11px; */
     padding: 24px;
     margin-top: auto;
     margin-bottom: 48px;
     background: #101828;
     border-radius: 12px;
-    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08); */
 }
 
 .section__footer-content {
@@ -84,7 +85,7 @@
     flex: 1 0 45%; 
 }
 
-/* Адаптивные стили для экранов с шириной 768px и меньше */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 768px пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 @media screen and (max-width: 426px) {
     .section__footer-contacts {
         display: grid; 
@@ -99,7 +100,7 @@
     }
 }
 
-/* Стили для экранов шириной больше 768px */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 768px */
 @media screen and (min-width: 426px) {
     .section__footer-contacts {
         display: flex;
