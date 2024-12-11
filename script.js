@@ -72,7 +72,6 @@ function init() {
     };
 
     const items = new ListItems(document.getElementById('list-items'), data);
-
     items.render();
     items.init();
 
@@ -81,13 +80,11 @@ function init() {
         this.data = data;
 
         this.init = function () {
-            const parents = this.el.querySelectorAll('[data-parent]');
-
-            parents.forEach(parent => {
-                const open = parent.querySelector('[data-open]');
-
-                if (open) {
-                    open.addEventListener('click', () => this.toggleItems(parent));
+            this.el.addEventListener('click', (event) => {
+                const arrow = event.target.closest('[data-open]');
+                if (arrow) {
+                    const parent = arrow.closest('[data-parent]');
+                    this.toggleItems(parent);
                 }
             });
         };
@@ -97,40 +94,31 @@ function init() {
         };
 
         this.renderParent = function (data) {
-            return `
-                <div class="list-item" data-parent>
-                    <div class="list-item__inner">
-                        <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
-                        <img class="list-item__folder" src="img/folder.png" alt="folder">
-                        <span>${data.name}</span>
+            let html = `
+            <div class="list-item" data-parent>
+                <div class="list-item__inner">
+                    <div class="list-item__arrow-container">
+                        ${data.hasChildren ? '<img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>' : ''}
                     </div>
-                    ${data.hasChildren ? `<div class="list-item__items">${data.items.map(this.renderParent.bind(this)).join('')}</div>` : ''}
-                </div>
-            `;
-        };
+                    <img class="list-item__folder" src="img/folder.png" alt="folder">
+                    <span class="list-item__text">${data.name}</span>
+                </div>`;
 
-        this.renderChildren = function (data) {
-            return `
-                <div class="list-item">
-                    <div class="list-item__inner">
-                        <img class="list-item__folder" src="img/folder.png" alt="folder">
-                        <span>${data.name}</span>
-                    </div>
-                </div>
-            `;
+            if (data.hasChildren) {
+                html += '<div class="list-item__items">';
+                data.items.forEach(item => {
+                    html += this.renderParent(item);
+                });
+                html += '</div>';
+            }
+
+            html += '</div>';
+            return html;
         };
 
         this.toggleItems = function (parent) {
-            const items = parent.querySelector('.list-item__items');
-
-            if (items) {
-                items.classList.toggle('hidden');
-            }
-
-            const arrow = parent.querySelector('.list-item__arrow');
-            if (arrow) {
-                arrow.classList.toggle('rotated');
-            }
+            parent.classList.toggle('list-item_open');
         };
     }
+
 }

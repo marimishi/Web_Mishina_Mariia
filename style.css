@@ -4,9 +4,9 @@
 }
 
 .list-item__inner {
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .list-item__arrow-container {
