@@ -1,0 +1,221 @@
+.section__discuss {
+    background: url("../../assets/img/discuss/discuss-background1440px.png") #000000;
+    margin-left: -50px;
+    padding: 80px 50px;
+    max-width: 100%;
+    width: 100vw;
+    display: flex;
+    gap: 24px;
+}
+
+.form__discuss-content {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: fit-content;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-label {
+  font-family: "SF Pro Text Medium", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  color: #667085;
+}
+
+.section-input {
+  border: none;
+  border-bottom: solid 0.7px #d0d5dd;
+  font-family: "SF Pro Text Regular", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #101828;
+}
+
+.section__discuss-leftsection {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section__discuss-rightsection {
+  max-width: 600px;
+  width: 100%;
+}
+
+.section__discuss-rightsection .form-wrapper {
+  gap: 24px;
+}
+
+.section__discuss-rightsection .form-wrapper .button-blue {
+  align-self: flex-end;
+  width: fit-content;
+  height: fit-content;
+}
+
+.section__discuss .section-title {
+  max-width: 240px;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.section__discuss .section-text {
+  max-width: 400px;
+  letter-spacing: 0;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1224px) {
+  .section__projects-link {
+    padding: 10px;
+  }
+  .section__discuss {
+    margin-left: -80px;
+    margin-right: -80px;
+    padding: 80px;
+    width: 100vw;
+    max-width: 97%;
+  }
+  .section__projects-link a {
+    font-family: "SF Pro Text Regular", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: #1d2939;
+    text-decoration: none;
+  }
+  .form-wrapper {
+    max-width: 77%;
+    height: fit-content;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .section__discuss-rightsection .form-wrapper {
+    gap: 24px;
+  }
+  .section__discuss-leftsection {
+    /* margin-left: 30px; */
+  }
+}
+@media screen and (max-width: 1023px) {
+  .section__discuss {
+    justify-content: center;
+    max-width: 94%;
+    width: 100vw;
+  }
+  .section__discuss .section-title {
+    max-width: 240px;
+    color: #ffffff;
+    font-size: 36px;
+  }
+  .section__discuss-leftsection {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  .form-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .section__discuss .section-title {
+    max-width: 600px;
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  .section__discuss .section-text {
+    max-width: 344px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+    .section__discuss {
+        background: url(../../assets/img/discuss/discuss-background768px.png) #000000;
+        /* margin-left: -65px; */
+        padding: 50px;
+        gap: 32px;
+        width: 100vw;
+        max-width: 110%;
+        flex-direction: column;
+        align-items: center;
+    }
+  .section__discuss .section-title {
+    max-width: 240px;
+    color: #ffffff;
+    font-size: 36px;
+  }
+  .section__discuss-leftsection {
+    /* max-width: 100%; */
+    text-align: center;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .section__discuss-rightsection {
+    max-width: 100%;
+  }
+  .form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .section__discuss .section-title {
+    max-width: 100%;
+    font-size: 20px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+  .section__discuss .section-text {
+    max-width: 300px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .section__discuss-rightsection .form-wrapper .button-blue {
+    align-self: center;
+    width: 100%;
+    max-width: 200px;
+  }
+  .section__discuss-rightsection {
+    max-width: 70%;
+  }
+}
+
+/*# sourceMappingURL=discuss.scss.map */
