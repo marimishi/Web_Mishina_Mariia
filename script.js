@@ -46,7 +46,7 @@ function init() {
                         ]
                     }
                 ]
-            },{
+            }, {
                 name: 'Фильтры',
                 hasChildren: true,
                 items: [
