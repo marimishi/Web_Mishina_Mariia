@@ -14,49 +14,57 @@ function init() {
                 hasChildren: true,
                 items: [
                     {
-                        name: 'Ulgran',
+                        name: 'Ulgran1',
                         hasChildren: true,
                         items: [
-                            { name: 'Smth', hasChildren: false, items: [] },
-                            { name: 'Smth', hasChildren: false, items: [] }
+                            {
+                                name: 'SMT1',
+                                hasChildren: false,
+                                items: []
+                            },
+                            {
+                                name: 'SMT2',
+                                hasChildren: false,
+                                items: []
+                            }
                         ]
                     },
                     {
-                        name: 'Vigro Mramor',
-                        hasChildren: false,
-                        items: []
-                    },
-                    {
-                        name: 'Handmade',
+                        name: 'Ulgran2',
                         hasChildren: true,
                         items: [
-                            { name: 'Smth', hasChildren: false, items: [] },
-                            { name: 'Smth', hasChildren: false, items: [] }
+                            {
+                                name: 'SMT3',
+                                hasChildren: false,
+                                items: []
+                            },
+                            {
+                                name: 'SMT4',
+                                hasChildren: false,
+                                items: []
+                            }
                         ]
-                    },
-                    {
-                        name: 'Vigro Glass',
-                        hasChildren: false,
-                        items: []
                     }
                 ]
-            },
-            {
+            }, {
                 name: 'Фильтры',
                 hasChildren: true,
                 items: [
                     {
-                        name: 'Ulgran',
+                        name: 'Ulgran3',
                         hasChildren: true,
                         items: [
-                            { name: 'Smth', hasChildren: false, items: [] },
-                            { name: 'Smth', hasChildren: false, items: [] }
+                            {
+                                name: 'SMT5',
+                                hasChildren: false,
+                                items: []
+                            },
+                            {
+                                name: 'SMT6',
+                                hasChildren: false,
+                                items: []
+                            }
                         ]
-                    },
-                    {
-                        name: 'Vigro Mramor',
-                        hasChildren: false,
-                        items: []
                     }
                 ]
             }
@@ -64,6 +72,7 @@ function init() {
     };
 
     const items = new ListItems(document.getElementById('list-items'), data);
+
     items.render();
     items.init();
 
@@ -72,11 +81,13 @@ function init() {
         this.data = data;
 
         this.init = function () {
-            this.el.addEventListener('click', (event) => {
-                const arrow = event.target.closest('[data-open]');
-                if (arrow) {
-                    const parent = arrow.closest('[data-parent]');
-                    this.toggleItems(parent);
+            const parents = this.el.querySelectorAll('[data-parent]');
+
+            parents.forEach(parent => {
+                const open = parent.querySelector('[data-open]');
+
+                if (open) {
+                    open.addEventListener('click', () => this.toggleItems(parent));
                 }
             });
         };
@@ -85,33 +96,41 @@ function init() {
             this.el.innerHTML = this.renderParent(this.data);
         };
 
-        // Рендеринг узлов
         this.renderParent = function (data) {
-            let html = `
+            return `
                 <div class="list-item" data-parent>
                     <div class="list-item__inner">
-                        <div class="list-item__arrow-container">
-                            ${data.hasChildren ? '<img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>' : ''}
-                        </div>
+                        <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
                         <img class="list-item__folder" src="img/folder.png" alt="folder">
-                        <span class="list-item__text">${data.name}</span>
-                    </div>`;
-
-            if (data.hasChildren) {
-                html += '<div class="list-item__items">';
-                data.items.forEach(item => {
-                    html += this.renderParent(item); // Рекурсия
-                });
-                html += '</div>';
-            }
-
-            html += '</div>';
-            return html;
+                        <span>${data.name}</span>
+                    </div>
+                    ${data.hasChildren ? `<div class="list-item__items">${data.items.map(this.renderParent.bind(this)).join('')}</div>` : ''}
+                </div>
+            `;
         };
 
-        // Метод переключения класса
+        this.renderChildren = function (data) {
+            return `
+                <div class="list-item">
+                    <div class="list-item__inner">
+                        <img class="list-item__folder" src="img/folder.png" alt="folder">
+                        <span>${data.name}</span>
+                    </div>
+                </div>
+            `;
+        };
+
         this.toggleItems = function (parent) {
-            parent.classList.toggle('list-item_open');
+            const items = parent.querySelector('.list-item__items');
+
+            if (items) {
+                items.classList.toggle('hidden');
+            }
+
+            const arrow = parent.querySelector('.list-item__arrow');
+            if (arrow) {
+                arrow.classList.toggle('rotated');
+            }
         };
     }
 }
